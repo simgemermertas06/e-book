@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fareyle seçilen yazıların rengi*/
+::selection {
+  background-color: orangered;
+  color: white;
+}
+
+/* Chrome, Edge, Safari için scroll barın genel genişliği ve yüksekliği */
+::-webkit-scrollbar {
+  width: 10px; /* Dikey scrollbar genişliği */
+  height: 10px; /* Yatay scrollbar yüksekliği */
+}
+
+/* Scrollbar içindeki kaydırıcı (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: orangered; /* Kaydırıcının rengi */
+  border-radius: 8px; /* Kenarları yuvarlak yapar */
+}
+
+/* Scrollbar rayının (track) arka plan rengi - açık mod için */
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Açık gri renk */
+}
+
+/* Karanlık mod için track arka plan rengi */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background-color: #1f1f1f; /* Koyu gri renk */
+  }
+}
+
+/* Firefox için scroll renkleri ve genişlik ayarı */
+* {
+  scrollbar-color: orangered #f0f0f0; /* thumb ve track renkleri */
+  scrollbar-width: thin; /* ince scrollbar */
+}
